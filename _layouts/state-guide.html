@@ -1,0 +1,292 @@
+---
+layout: default
+---
+
+{%- assign state = page.state -%}
+{%- assign state_code = page.state_code -%}
+{%- assign quick_answer = page.quick_answer -%}
+{%- assign deadline_days = page.deadline_days | default: 30 -%}
+{%- assign traffic_school_name = page.traffic_school_name | default: "Traffic School" -%}
+{%- assign traffic_school_hours = page.traffic_school_hours | default: "4-8" -%}
+{%- assign traffic_school_cost = page.traffic_school_cost | default: "$25-$50" -%}
+{%- assign court_fee = page.court_fee | default: "$50-$150" -%}
+{%- assign ticket_fine_range = page.ticket_fine_range | default: "$150-$500" -%}
+{%- assign insurance_increase_3yr = page.insurance_increase_3yr | default: "$1,200-$4,500" -%}
+{%- assign total_with_school = page.total_with_school | default: "$200-$600" -%}
+{%- assign total_without_school = page.total_without_school | default: "$1,350-$5,000" -%}
+{%- assign frequency_limit = page.frequency_limit | default: "once per 12 months" -%}
+{%- assign affiliate_url = page.affiliate_url | default: "/traffic-school/" -%}
+{%- assign affiliate_text = page.affiliate_text | default: "Find a state-approved course" -%}
+
+{%- comment -%} Structured Data: BreadcrumbList + Article + HowTo + FAQPage {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ state }} Traffic Tickets",
+          "item": "{{ site.url }}{{ page.url }}"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "{{ page.title }}",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ site.author.name | default: 'DismissTicket' }}"
+      },
+      "datePublished": "{{ page.date_published | default: page.date | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ page.last_modified | default: site.time | date: '%Y-%m-%d' }}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "DismissTicket",
+        "url": "{{ site.url }}/"
+      }
+    }
+    {%- if page.schema_howto -%}
+    ,{{ page.schema_howto }}
+    {%- endif -%}
+    {%- if page.schema_faq -%}
+    ,{{ page.schema_faq }}
+    {%- endif -%}
+  ]
+}
+</script>
+
+<article class="sg" itemscope itemtype="https://schema.org/Article">
+
+  {%- comment -%} ── Breadcrumb Navigation ── {%- endcomment -%}
+  <nav class="sg-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">{{ state }}</li>
+    </ol>
+  </nav>
+
+  {%- comment -%} ── Page Header ── {%- endcomment -%}
+  <header class="sg-header">
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <p class="sg-header-meta">
+      Updated {{ page.last_modified | default: site.time | date: "%B %Y" }}
+      {%- if page.read_time %} &middot; {{ page.read_time }} min read{%- endif %}
+    </p>
+  </header>
+
+  {%- comment -%} ── Quick Answer Box ── {%- endcomment -%}
+  {%- if quick_answer %}
+  <section class="sg-quick-answer" aria-label="Quick answer">
+    <p class="sg-quick-answer-label">The short answer</p>
+    <p class="sg-quick-answer-text">{{ quick_answer }}</p>
+    {%- if page.quick_answer_detail %}
+    <p class="sg-quick-answer-detail">{{ page.quick_answer_detail }}</p>
+    {%- endif %}
+  </section>
+  {%- endif %}
+
+  {%- comment -%} ── Deadline Warning ── {%- endcomment -%}
+  {%- if page.deadline_warning %}
+  <aside class="sg-deadline-warning" role="alert">
+    <p class="sg-deadline-warning-icon" aria-hidden="true">!</p>
+    <div class="sg-deadline-warning-body">
+      <p class="sg-deadline-warning-title">Deadline</p>
+      <p>{{ page.deadline_warning }}</p>
+    </div>
+  </aside>
+  {%- endif %}
+
+  {%- comment -%} ── Main Content Area with Sidebar ── {%- endcomment -%}
+  <div class="sg-layout">
+    <div class="sg-main">
+
+      {%- comment -%} ── Options Cards ── {%- endcomment -%}
+      {%- if page.options %}
+      <section class="sg-options" id="options">
+        <h2>Your Options in {{ state }}</h2>
+        <ol class="sg-options-list">
+          {%- for option in page.options %}
+          <li class="sg-option-card">
+            <div class="sg-option-number">{{ forloop.index }}</div>
+            <div class="sg-option-body">
+              <h3 class="sg-option-title">{{ option.title }}</h3>
+              <p class="sg-option-desc">{{ option.description }}</p>
+              {%- if option.best_for %}
+              <p class="sg-option-best-for"><strong>Best for:</strong> {{ option.best_for }}</p>
+              {%- endif %}
+              {%- if option.link %}
+              <a href="{{ option.link }}" class="sg-option-link">Learn more</a>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endif %}
+
+      {%- comment -%} ── Cost Comparison Table ── {%- endcomment -%}
+      <section class="sg-cost-comparison" id="costs">
+        <h2>What a ticket really costs in {{ state }}</h2>
+        <div class="sg-cost-table-wrap">
+          <table class="sg-cost-table">
+            <thead>
+              <tr>
+                <th scope="col">Cost</th>
+                <th scope="col">With {{ traffic_school_name }}</th>
+                <th scope="col">Without (pay the fine)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ticket fine</td>
+                <td>{{ ticket_fine_range }}</td>
+                <td>{{ ticket_fine_range }}</td>
+              </tr>
+              {%- if page.fine_waived_with_school %}
+              <tr>
+                <td>Fine waived?</td>
+                <td>{{ page.fine_waived_with_school }}</td>
+                <td>No</td>
+              </tr>
+              {%- endif %}
+              <tr>
+                <td>Court / admin fee</td>
+                <td>{{ court_fee }}</td>
+                <td>$0</td>
+              </tr>
+              <tr>
+                <td>Course fee</td>
+                <td>{{ traffic_school_cost }}</td>
+                <td>$0</td>
+              </tr>
+              <tr>
+                <td>Insurance increase (3 years)</td>
+                <td>$0</td>
+                <td>{{ insurance_increase_3yr }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>{{ total_with_school }}</strong></td>
+                <td><strong>{{ total_without_school }}</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      {%- comment -%} ── Step-by-Step Process ── {%- endcomment -%}
+      {%- if page.steps %}
+      <section class="sg-steps" id="steps">
+        <h2>Step-by-step: dismiss your ticket in {{ state }}</h2>
+        <ol class="sg-steps-list">
+          {%- for step in page.steps %}
+          <li class="sg-step">
+            <div class="sg-step-indicator" aria-hidden="true">
+              <span class="sg-step-number">{{ forloop.index }}</span>
+              {%- unless forloop.last %}<span class="sg-step-connector"></span>{%- endunless %}
+            </div>
+            <div class="sg-step-body">
+              <h3 class="sg-step-title">{{ step.title }}</h3>
+              <p>{{ step.description }}</p>
+              {%- if step.note %}
+              <p class="sg-step-note">{{ step.note }}</p>
+              {%- endif %}
+            </div>
+          </li>
+          {%- endfor %}
+        </ol>
+      </section>
+      {%- endif %}
+
+      {%- comment -%} ── Main Body Content (from Markdown) ── {%- endcomment -%}
+      <div class="sg-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      {%- comment -%} ── FAQ Section ── {%- endcomment -%}
+      {%- if page.faqs %}
+      <section class="sg-faq" id="faq">
+        <h2>Frequently asked questions</h2>
+        <dl class="sg-faq-list">
+          {%- for faq in page.faqs %}
+          <div class="sg-faq-item">
+            <dt class="sg-faq-question">{{ faq.question }}</dt>
+            <dd class="sg-faq-answer">{{ faq.answer }}</dd>
+          </div>
+          {%- endfor %}
+        </dl>
+      </section>
+      {%- endif %}
+
+      {%- comment -%} ── Traffic School CTA ── {%- endcomment -%}
+      <section class="sg-cta" id="traffic-school">
+        <h2>Ready to dismiss your {{ state }} ticket?</h2>
+        <p>
+          {{ traffic_school_name }} is the fastest path for most drivers.
+          A {{ traffic_school_hours }}-hour online course costs {{ traffic_school_cost }}
+          and saves you {{ insurance_increase_3yr }} in insurance increases.
+          You can complete it from your phone.
+        </p>
+        <a href="{{ affiliate_url }}" class="sg-cta-button">{{ affiliate_text }}</a>
+        <p class="sg-cta-fine-print">
+          Eligible {{ frequency_limit }}. Verify your eligibility with your court before enrolling.
+        </p>
+      </section>
+
+      {%- comment -%} ── Legal Disclaimer ── {%- endcomment -%}
+      <footer class="sg-disclaimer">
+        <p>
+          This guide provides general information about {{ state }} traffic ticket options.
+          This is not legal advice. Laws change regularly.
+          Consult a licensed {{ state }} attorney for specific legal questions.
+        </p>
+      </footer>
+
+    </div>{%- comment -%} /.sg-main {%- endcomment -%}
+
+    {%- comment -%} ── Sidebar: Related State Links ── {%- endcomment -%}
+    <aside class="sg-sidebar" aria-label="Related state guides">
+      <div class="sg-sidebar-inner">
+        <h2 class="sg-sidebar-title">Other state guides</h2>
+        <ul class="sg-sidebar-links">
+          {%- assign states = "california,texas,florida,new-york" | split: "," -%}
+          {%- assign state_labels = "California,Texas,Florida,New York" | split: "," -%}
+          {%- for s in states -%}
+            {%- assign slug = "/" | append: s | append: "/" -%}
+            {%- unless page.url == slug %}
+          <li><a href="{{ slug }}">{{ state_labels[forloop.index0] }}</a></li>
+            {%- endunless %}
+          {%- endfor %}
+        </ul>
+
+        {%- if page.resources %}
+        <h2 class="sg-sidebar-title">Official resources</h2>
+        <ul class="sg-sidebar-links">
+          {%- for resource in page.resources %}
+          <li><a href="{{ resource.url }}" rel="noopener" target="_blank">{{ resource.title }}</a></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+
+        <div class="sg-sidebar-cta">
+          <p><strong>Need to dismiss a ticket?</strong></p>
+          <a href="{{ affiliate_url }}" class="sg-sidebar-cta-link">View {{ state }} courses</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>{%- comment -%} /.sg-layout {%- endcomment -%}
+
+</article>

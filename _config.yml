@@ -1,10 +1,9 @@
 title: "DismissTicket"
-tagline: "How to Dismiss Your Traffic Ticket — State-by-State Guides & Legal Tools"
-description: "Step-by-step guides to dismiss traffic tickets in every US state. Learn your rights, find traffic school options, and get expert tips to fight your ticket."
+tagline: "How to Dismiss Your Traffic Ticket — State-by-State Guides & Free Tools"
+description: "Free state-by-state guides to dismiss traffic tickets. Traffic school options, court procedures, cost calculators, and decision tools for every US state."
 url: "https://dismissticket.com"
 baseurl: ""
 permalink: /:title/
-theme: minima
 
 author:
   name: DismissTicket Team
@@ -13,6 +12,7 @@ author:
 exclude:
   - README.md
   - CLAUDE.md
+  - Gemfile.lock
 
 include:
   - _headers
@@ -24,6 +24,7 @@ sass:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 defaults:
   - scope:
@@ -31,6 +32,30 @@ defaults:
     values:
       layout: default
   - scope:
-      path: "guides"
+      path: "california"
+    values:
+      layout: default
+      state: California
+      state_code: CA
+  - scope:
+      path: "texas"
+    values:
+      layout: default
+      state: Texas
+      state_code: TX
+  - scope:
+      path: "florida"
+    values:
+      layout: default
+      state: Florida
+      state_code: FL
+  - scope:
+      path: "new-york"
+    values:
+      layout: default
+      state: New York
+      state_code: NY
+  - scope:
+      path: "tools"
     values:
       layout: default

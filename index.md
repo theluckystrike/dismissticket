@@ -1,12 +1,80 @@
 ---
 layout: default
-title: "How to Dismiss a Traffic Ticket — Free State-by-State Guides"
-description: "Learn how to dismiss your traffic ticket with our free state-by-state guides. Find out your options: traffic school, dismissal programs, fighting your ticket in court, and more."
+title: "How to Dismiss a Traffic Ticket — Free State-by-State Guides (2026)"
+description: "Learn how to dismiss your traffic ticket. Free state-by-state guides for California, Texas, Florida, New York. Traffic school options, cost calculators, and decision tools."
+permalink: /
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "DismissTicket",
+      "url": "https://dismissticket.com/",
+      "description": "Free state-by-state traffic ticket dismissal guides and tools"
+    },
+    {
+      "@type": "Organization",
+      "name": "DismissTicket",
+      "url": "https://dismissticket.com/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I dismiss a traffic ticket without going to court?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Most states allow you to dismiss a traffic ticket by completing an approved traffic school or defensive driving course. Some states also offer Trial by Written Declaration or deferred adjudication options that do not require a court appearance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a traffic ticket really cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The true cost of a traffic ticket goes far beyond the fine. A typical speeding ticket with a $200 fine actually costs $1,350 to $5,200 over 3 years when you include court fees, insurance rate increases of 20 to 30 percent, and points on your driving record."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long do I have to respond to a traffic ticket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most states give you 15 to 30 days from the date of the citation to respond. Check your ticket for the exact deadline. Missing it can result in additional fines, a suspended license, or a bench warrant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will a dismissed ticket show on my record?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A properly dismissed ticket does not add points to your driving record and typically does not appear on insurance checks. It may still be visible to law enforcement."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dismissticket.com/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 # How to Dismiss a Traffic Ticket
 
-**Got a traffic ticket? Don't just pay it.** Paying a traffic ticket is an admission of guilt that adds points to your driving record, raises your insurance rates, and stays on your record for years.
+Got a traffic ticket? Don't just pay it. Paying a traffic ticket is an admission of guilt that adds points to your driving record, raises your insurance rates, and stays on your record for years.
 
 You have options. In most states, you can dismiss your ticket through traffic school, defensive driving courses, or by fighting it in court.
 
@@ -16,22 +84,16 @@ You have options. In most states, you can dismiss your ticket through traffic sc
 
 ### 1. Traffic School / Defensive Driving Course
 
-The most common way to dismiss a ticket. Most states allow you to take an online traffic school course to have your ticket dismissed. Benefits:
+The most common way to dismiss a ticket. Most states allow you to take an online traffic school course to have your ticket dismissed.
 
-- **Ticket dismissed** — no points on your record
-- **No insurance increase** — your insurer never sees the ticket
-- **Online courses available** — complete from home in 4-8 hours
-- **Cost:** $20-$100 depending on state (cheaper than most fines)
+- Ticket dismissed with no points on your record
+- No insurance increase because your insurer never sees the ticket
+- Online courses available that you can complete from home in 4-8 hours
+- Cost is $20-$100 depending on state (cheaper than most fines)
 
 ### 2. Request a Court Hearing
 
-You have a constitutional right to contest any traffic citation. Common defenses:
-
-- **Officer doesn't show up** — case often dismissed
-- **Incorrect information on ticket** — wrong date, location, or vehicle info
-- **Obscured or missing signage** — speed limit sign blocked or absent
-- **Calibration issues** — radar/lidar equipment not recently calibrated
-- **Emergency defense** — you were avoiding a hazard
+You have a constitutional right to contest any traffic citation. Common defenses include officer not showing up (case often dismissed), incorrect information on the ticket, obscured or missing signage, calibration issues with radar or lidar equipment, and emergency defense.
 
 ### 3. Ticket Dismissal Programs
 
@@ -45,29 +107,49 @@ For serious violations (reckless driving, excessive speed, CDL holders), a traff
 
 ## State-by-State Dismissal Guides
 
-Every state has different rules for traffic ticket dismissal. Click your state for a detailed guide:
+Every state has different rules for traffic ticket dismissal. Click your state for a detailed guide.
 
-| | | | |
-|---|---|---|---|
-| [California](/how-to-dismiss-a-traffic-ticket-in-california/) | [Texas](/how-to-dismiss-a-traffic-ticket-in-texas/) | [Florida](/how-to-dismiss-a-traffic-ticket-in-florida/) | [New York](/how-to-dismiss-a-traffic-ticket-in-new-york/) |
+<div class="state-selector">
+<div class="state-grid">
+<a href="/california/" class="state-card"><span class="state-abbr">CA</span> California</a>
+<a href="/texas/" class="state-card"><span class="state-abbr">TX</span> Texas</a>
+<a href="/florida/" class="state-card"><span class="state-abbr">FL</span> Florida</a>
+<a href="/new-york/" class="state-card"><span class="state-abbr">NY</span> New York</a>
+</div>
+</div>
 
 *More state guides coming soon.*
 
 ---
 
+## Free Tools
+
+<div class="tools-grid">
+<a href="/tools/decision-quiz/" class="tool-card">
+<h3>What Should I Do With My Ticket?</h3>
+<p>Answer 5 questions and get a personalized recommendation for your situation.</p>
+</a>
+<a href="/tools/cost-calculator/" class="tool-card">
+<h3>True Cost Calculator</h3>
+<p>See what your ticket really costs including insurance increases over 3 years.</p>
+</a>
+</div>
+
+---
+
 ## How Much Does a Traffic Ticket Really Cost?
 
-Most people don't realize the true cost of a traffic ticket goes far beyond the fine:
+Most people don't realize the true cost of a traffic ticket goes far beyond the fine.
 
 | Cost | Amount |
 |------|--------|
-| **Base fine** | $100-$500 |
-| **Court fees & surcharges** | $50-$200 |
-| **Insurance increase** (3 years) | $1,200-$4,500 |
-| **Points on license** | 1-4 points |
-| **Total real cost** | **$1,350-$5,200** |
+| Base fine | $100-$500 |
+| Court fees and surcharges | $50-$200 |
+| Insurance increase (3 years) | $1,200-$4,500 |
+| Points on license | 1-4 points |
+| Total real cost | $1,350-$5,200 |
 
-Compare that to the cost of traffic school ($25-$100) or a traffic ticket attorney ($150-$400). **Dismissing your ticket saves thousands.**
+Compare that to the cost of traffic school ($25-$100) or a traffic ticket attorney ($150-$400). Dismissing your ticket saves thousands.
 
 ---
 
@@ -75,7 +157,7 @@ Compare that to the cost of traffic school ($25-$100) or a traffic ticket attorn
 
 ### How long do I have to respond to a traffic ticket?
 
-Most states give you 15-30 days from the date of the citation to respond. Check your ticket for the deadline — missing it can result in additional fines, a suspended license, or a bench warrant.
+Most states give you 15-30 days from the date of the citation to respond. Check your ticket for the deadline. Missing it can result in additional fines, a suspended license, or a bench warrant.
 
 ### Will a dismissed ticket show on my record?
 

@@ -4,8 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - 'guides/**'
+      - 'california/**'
+      - 'texas/**'
+      - 'florida/**'
+      - 'new-york/**'
+      - 'tools/**'
       - 'index.md'
+      - 'traffic-school.md'
   workflow_dispatch:
     inputs:
       submit_all:
@@ -37,11 +42,24 @@ jobs:
           if [[ "${{ github.event.inputs.submit_all }}" == "true" ]]; then
             echo "Mode: submitting ALL URLs"
             echo "${SITE}/" >> "$URL_FILE"
+            echo "${SITE}/traffic-school/" >> "$URL_FILE"
 
-            for f in guides/*.md; do
+            for state_dir in california texas florida new-york; do
+              if [[ -d "$state_dir" ]]; then
+                echo "${SITE}/${state_dir}/" >> "$URL_FILE"
+                for f in "${state_dir}"/*.md; do
+                  [[ -f "$f" ]] || continue
+                  slug=$(basename "$f" .md)
+                  [[ "$slug" == "index" ]] && continue
+                  echo "${SITE}/${state_dir}/${slug}/" >> "$URL_FILE"
+                done
+              fi
+            done
+
+            for f in tools/*.md; do
               [[ -f "$f" ]] || continue
               slug=$(basename "$f" .md)
-              echo "${SITE}/${slug}/" >> "$URL_FILE"
+              echo "${SITE}/tools/${slug}/" >> "$URL_FILE"
             done
           else
             echo "Mode: submitting changed URLs only"
@@ -58,13 +76,17 @@ jobs:
             while IFS= read -r file; do
               [[ -z "$file" ]] && continue
               case "$file" in
-                guides/*.md)
-                  slug=$(basename "$file" .md)
-                  echo "${SITE}/${slug}/" >> "$URL_FILE"
-                  ;;
-                index.md)
-                  echo "${SITE}/" >> "$URL_FILE"
-                  ;;
+                california/index.md)   echo "${SITE}/california/" >> "$URL_FILE" ;;
+                texas/index.md)        echo "${SITE}/texas/" >> "$URL_FILE" ;;
+                florida/index.md)      echo "${SITE}/florida/" >> "$URL_FILE" ;;
+                new-york/index.md)     echo "${SITE}/new-york/" >> "$URL_FILE" ;;
+                california/*.md)       slug=$(basename "$file" .md); echo "${SITE}/california/${slug}/" >> "$URL_FILE" ;;
+                texas/*.md)            slug=$(basename "$file" .md); echo "${SITE}/texas/${slug}/" >> "$URL_FILE" ;;
+                florida/*.md)          slug=$(basename "$file" .md); echo "${SITE}/florida/${slug}/" >> "$URL_FILE" ;;
+                new-york/*.md)         slug=$(basename "$file" .md); echo "${SITE}/new-york/${slug}/" >> "$URL_FILE" ;;
+                tools/*.md)            slug=$(basename "$file" .md); echo "${SITE}/tools/${slug}/" >> "$URL_FILE" ;;
+                index.md)              echo "${SITE}/" >> "$URL_FILE" ;;
+                traffic-school.md)     echo "${SITE}/traffic-school/" >> "$URL_FILE" ;;
               esac
             done <<< "$CHANGED"
           fi
