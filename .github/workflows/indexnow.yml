@@ -1,0 +1,114 @@
+name: IndexNow Submission
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'guides/**'
+      - 'index.md'
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: 'Submit all URLs (not just changed ones)'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ github.event.inputs.submit_all == 'true' && 0 || 2 }}
+
+      - name: Collect changed URLs
+        id: collect
+        run: |
+          SITE="https://dismissticket.com"
+          URL_FILE=$(mktemp)
+
+          if [[ "${{ github.event.inputs.submit_all }}" == "true" ]]; then
+            echo "Mode: submitting ALL URLs"
+            echo "${SITE}/" >> "$URL_FILE"
+
+            for f in guides/*.md; do
+              [[ -f "$f" ]] || continue
+              slug=$(basename "$f" .md)
+              echo "${SITE}/${slug}/" >> "$URL_FILE"
+            done
+          else
+            echo "Mode: submitting changed URLs only"
+
+            if git rev-parse HEAD~1 >/dev/null 2>&1; then
+              CHANGED=$(git diff --name-only HEAD~1 HEAD)
+            else
+              CHANGED=$(git ls-tree -r --name-only HEAD)
+            fi
+
+            echo "Changed files:"
+            echo "$CHANGED"
+
+            while IFS= read -r file; do
+              [[ -z "$file" ]] && continue
+              case "$file" in
+                guides/*.md)
+                  slug=$(basename "$file" .md)
+                  echo "${SITE}/${slug}/" >> "$URL_FILE"
+                  ;;
+                index.md)
+                  echo "${SITE}/" >> "$URL_FILE"
+                  ;;
+              esac
+            done <<< "$CHANGED"
+          fi
+
+          sort -u "$URL_FILE" -o "$URL_FILE"
+          COUNT=$(wc -l < "$URL_FILE" | tr -d ' ')
+          echo "Collected ${COUNT} URLs"
+
+          if [[ "$COUNT" -gt 0 ]]; then
+            echo "URLs to submit:"
+            cat "$URL_FILE"
+          fi
+
+          cp "$URL_FILE" /tmp/indexnow_urls.txt
+          echo "url_file=/tmp/indexnow_urls.txt" >> "$GITHUB_OUTPUT"
+          echo "count=${COUNT}" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to IndexNow
+        if: steps.collect.outputs.count != '0'
+        env:
+          INDEXNOW_KEY: c4ded4558ba249bbbd828bbfd67ebe80
+        run: |
+          URL_FILE="/tmp/indexnow_urls.txt"
+          TOTAL=${{ steps.collect.outputs.count }}
+
+          PAYLOAD=$(jq -R -s \
+            --arg host "dismissticket.com" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyloc "https://dismissticket.com/${INDEXNOW_KEY}.txt" \
+            '{
+              host: $host,
+              key: $key,
+              keyLocation: $keyloc,
+              urlList: (split("\n") | map(select(length > 0)))
+            }' "$URL_FILE")
+
+          HTTP_CODE=$(curl -s -o /tmp/indexnow_response.txt -w "%{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD" \
+            --max-time 30)
+
+          echo "Submitted $TOTAL URLs to IndexNow (HTTP $HTTP_CODE)"
+
+      - name: No URLs to submit
+        if: steps.collect.outputs.count == '0'
+        run: echo "No URLs changed. Skipping IndexNow submission."

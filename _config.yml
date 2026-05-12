@@ -1,0 +1,36 @@
+title: "DismissTicket"
+tagline: "How to Dismiss Your Traffic Ticket — State-by-State Guides & Legal Tools"
+description: "Step-by-step guides to dismiss traffic tickets in every US state. Learn your rights, find traffic school options, and get expert tips to fight your ticket."
+url: "https://dismissticket.com"
+baseurl: ""
+permalink: /:title/
+theme: minima
+
+author:
+  name: DismissTicket Team
+  url: https://dismissticket.com
+
+exclude:
+  - README.md
+  - CLAUDE.md
+
+include:
+  - _headers
+  - _redirects
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "guides"
+    values:
+      layout: default
