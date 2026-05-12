@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "How to Dismiss a Traffic Ticket — Free State-by-State Guides (2026)"
+title: "How to Dismiss a Traffic Ticket — Free Guides, Tools & State-by-State Rules (2026)"
 description: "Learn how to dismiss your traffic ticket. Free state-by-state guides for California, Texas, Florida, New York. Traffic school options, cost calculators, and decision tools."
 permalink: /
 ---
@@ -53,6 +53,22 @@ permalink: /
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. A properly dismissed ticket does not add points to your driving record and typically does not appear on insurance checks. It may still be visible to law enforcement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will a speeding ticket affect my insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A speeding ticket raises insurance premiums by 20 to 30 percent on average for 3 to 5 years. On a $1,900 annual premium, that is $1,368 over 3 years. Traffic school or defensive driving prevents the increase in most states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a defensive driving course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A defensive driving course, also called traffic school or driver improvement course, is a state-approved class that dismisses your traffic ticket when completed. Most courses are available online, take 4 to 8 hours, and cost $15 to $50."
           }
         }
       ]
@@ -115,10 +131,18 @@ Every state has different rules for traffic ticket dismissal. Click your state f
 <a href="/texas/" class="state-card"><span class="state-abbr">TX</span> Texas</a>
 <a href="/florida/" class="state-card"><span class="state-abbr">FL</span> Florida</a>
 <a href="/new-york/" class="state-card"><span class="state-abbr">NY</span> New York</a>
+<a href="/georgia/" class="state-card"><span class="state-abbr">GA</span> Georgia</a>
+<a href="/ohio/" class="state-card"><span class="state-abbr">OH</span> Ohio</a>
 </div>
 </div>
 
 *More state guides coming soon.*
+
+### Additional Guides
+
+- [How to Fight a Speeding Ticket](/how-to-fight-a-speeding-ticket/) — Step-by-step guide to contesting your ticket in court
+- [Will a Speeding Ticket Affect My Insurance?](/speeding-ticket-insurance/) — How much your rates will increase and how to prevent it
+- [Online Defensive Driving Courses](/traffic-school/) — Compare courses, costs, and state eligibility rules
 
 ---
 
@@ -134,6 +158,10 @@ Every state has different rules for traffic ticket dismissal. Click your state f
 <p>See what your ticket really costs including insurance increases over 3 years.</p>
 </a>
 </div>
+
+### Worried About Insurance?
+
+A single speeding ticket raises your insurance by 20-30% for 3 years. That is $1,000-$4,500 in additional premiums. [Learn how to prevent the increase](/speeding-ticket-insurance/).
 
 ---
 
@@ -174,6 +202,14 @@ Most states limit traffic school dismissal to once every 12-18 months. Some stat
 ### Do I need a lawyer to fight a traffic ticket?
 
 No. You can represent yourself at a traffic court hearing. However, for serious violations (reckless driving, excessive speed over 25+ mph, school zones) or if you hold a CDL, a traffic ticket attorney is strongly recommended.
+
+### Will a speeding ticket affect my insurance?
+
+Yes. A speeding ticket raises insurance premiums by 20-30% on average for 3-5 years. On a $1,900 annual premium, that is $1,368 over 3 years. Traffic school or defensive driving prevents the increase in most states. See our [full insurance impact guide](/speeding-ticket-insurance/).
+
+### What is a defensive driving course?
+
+A defensive driving course (also called traffic school or driver improvement course) is a state-approved class that dismisses your traffic ticket when completed. Most courses are available online, take 4-8 hours, and cost $15-$50. See our [complete traffic school guide](/traffic-school/).
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Dismiss a Traffic Ticket in Texas (2026 Guide)"
-description: "Complete guide to dismissing a traffic ticket in Texas. Learn about defensive driving courses, deferred disposition, and your legal rights under the Texas Transportation Code."
+title: "How to Dismiss a Traffic Ticket in Texas — Defensive Driving Course Online (2026)"
+description: "Complete Texas traffic ticket guide. TEA-approved online defensive driving courses, deferred disposition, speeding ticket costs, and how to dismiss your ticket. Free decision tools."
 permalink: /texas/
 redirect_from:
   - /how-to-dismiss-a-traffic-ticket-in-texas/
@@ -168,6 +168,8 @@ Texas allows eligible drivers to take a TEA-approved defensive driving course to
 
 Compare this to paying the fine ($150-$300+) plus the insurance increase ($1,200-$3,000 over 3 years).
 
+For a detailed guide on choosing the right online course, see our [Texas Online Defensive Driving Guide](/texas/defensive-driving-online/).
+
 ---
 
 ## Option 2: Deferred Disposition (Probation)
@@ -245,6 +247,18 @@ Texas does not use a point system. However, the Department of Public Safety trac
 
 ---
 
+## How Much Will Your Texas Ticket Cost?
+
+Use our [True Cost Calculator](/tools/cost-calculator/) to see the full cost of your ticket including insurance increases. A Texas speeding ticket that looks like a $200 fine actually costs $1,200 to $3,000 when you factor in 3 years of insurance rate increases.
+
+Not sure whether to take defensive driving or fight your ticket? Take our [5-question Decision Quiz](/tools/decision-quiz/) for a personalized recommendation.
+
+### Will Your Ticket Affect Your Insurance?
+
+A Texas speeding ticket raises insurance premiums by 22% on average for 3 years. On the average Texas premium of $1,800 per year, that is $1,188 in additional insurance costs. A defensive driving course prevents this increase entirely. Learn more in our [Speeding Ticket Insurance Impact Guide](/speeding-ticket-insurance/).
+
+---
+
 ## Frequently Asked Questions
 
 ### How often can I take defensive driving in Texas?
@@ -274,6 +288,9 @@ No. Texas does not allow defensive driving for tickets where you were cited for 
 - [Texas DPS Driver License](https://www.dps.texas.gov/section/driver-license)
 - [Texas Transportation Code](https://statutes.capitol.texas.gov/Docs/TN/htm/TN.545.htm)
 - [TEA-Approved Driving Safety Courses](https://www.tdlr.texas.gov/dsc/dsc.htm)
+- [Online Defensive Driving in Texas](/texas/defensive-driving-online/)
+- [Online Traffic School Guide](/traffic-school/)
+- [Should You Fight or Take Defensive Driving?](/tools/decision-quiz/)
 
 ---
 

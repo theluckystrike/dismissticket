@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "How to Dismiss a Traffic Ticket in California (2026 Guide)"
-description: "Complete guide to dismissing a traffic ticket in California. Learn about traffic school eligibility, Trial by Written Declaration, court procedures, and your legal rights under California Vehicle Code."
+title: "How to Dismiss a Traffic Ticket in California — Traffic School, Written Declaration (2026)"
+description: "Complete California traffic ticket guide. Traffic school eligibility, Trial by Written Declaration (CVC 40902), speeding ticket costs, and how to dismiss your ticket. Free tools and step-by-step instructions."
 permalink: /california/
 redirect_from:
   - /how-to-dismiss-a-traffic-ticket-in-california/
@@ -171,6 +171,8 @@ California allows eligible drivers to attend traffic school to mask a traffic vi
 - No insurance rate increase
 - The violation is still visible to law enforcement and courts
 
+See our [Online Traffic School Guide](/traffic-school/) for tips on choosing the best course.
+
 ---
 
 ## Option 2: Fight Your Ticket in Court
@@ -235,6 +237,20 @@ Even if you cannot get a full dismissal, you can often negotiate a reduced fine,
 
 ---
 
+## How Much Will Your California Ticket Cost?
+
+Use our [True Cost Calculator](/tools/cost-calculator/) to see the full cost of your ticket including insurance increases over 3 years. Most California drivers are shocked to learn a $238 speeding ticket actually costs $1,500 to $3,000.
+
+For a detailed breakdown of California speeding ticket fines and the penalty assessment multiplier, see our [California Speeding Ticket Cost Guide](/california/speeding-ticket-cost/).
+
+Not sure whether to take traffic school or fight your ticket? Take our [5-question Decision Quiz](/tools/decision-quiz/) for a personalized recommendation.
+
+### Will Your Ticket Affect Your Insurance?
+
+A California speeding ticket raises insurance premiums by 20-30% for 3 years. On the average California premium of $2,200 per year, that is $1,650 in additional costs. Traffic school prevents this increase entirely. Learn more in our [Speeding Ticket Insurance Impact Guide](/speeding-ticket-insurance/).
+
+---
+
 ## Frequently Asked Questions
 
 ### How often can I use traffic school in California?
@@ -264,6 +280,9 @@ In most cases, paying the fine is an admission of guilt and closes the case. How
 - [California Courts Traffic Self-Help](https://www.courts.ca.gov/selfhelp-traffic.htm)
 - [California DMV Point System](https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/the-driving-record/)
 - [California Vehicle Code](https://leginfo.legislature.ca.gov/faces/codes_displayexpandedbranch.xhtml?tocCode=VEH)
+- [California Speeding Ticket Costs](/california/speeding-ticket-cost/)
+- [Online Defensive Driving Courses](/traffic-school/)
+- [Should You Fight or Take Traffic School?](/tools/decision-quiz/)
 
 ---
 

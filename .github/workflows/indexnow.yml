@@ -8,9 +8,13 @@ on:
       - 'texas/**'
       - 'florida/**'
       - 'new-york/**'
+      - 'georgia/**'
+      - 'ohio/**'
       - 'tools/**'
       - 'index.md'
       - 'traffic-school.md'
+      - 'speeding-ticket-insurance.md'
+      - 'how-to-fight-a-speeding-ticket.md'
   workflow_dispatch:
     inputs:
       submit_all:
@@ -43,8 +47,10 @@ jobs:
             echo "Mode: submitting ALL URLs"
             echo "${SITE}/" >> "$URL_FILE"
             echo "${SITE}/traffic-school/" >> "$URL_FILE"
+            echo "${SITE}/speeding-ticket-insurance/" >> "$URL_FILE"
+            echo "${SITE}/how-to-fight-a-speeding-ticket/" >> "$URL_FILE"
 
-            for state_dir in california texas florida new-york; do
+            for state_dir in california texas florida new-york georgia ohio; do
               if [[ -d "$state_dir" ]]; then
                 echo "${SITE}/${state_dir}/" >> "$URL_FILE"
                 for f in "${state_dir}"/*.md; do
@@ -80,13 +86,19 @@ jobs:
                 texas/index.md)        echo "${SITE}/texas/" >> "$URL_FILE" ;;
                 florida/index.md)      echo "${SITE}/florida/" >> "$URL_FILE" ;;
                 new-york/index.md)     echo "${SITE}/new-york/" >> "$URL_FILE" ;;
+                georgia/index.md)      echo "${SITE}/georgia/" >> "$URL_FILE" ;;
+                ohio/index.md)         echo "${SITE}/ohio/" >> "$URL_FILE" ;;
                 california/*.md)       slug=$(basename "$file" .md); echo "${SITE}/california/${slug}/" >> "$URL_FILE" ;;
                 texas/*.md)            slug=$(basename "$file" .md); echo "${SITE}/texas/${slug}/" >> "$URL_FILE" ;;
                 florida/*.md)          slug=$(basename "$file" .md); echo "${SITE}/florida/${slug}/" >> "$URL_FILE" ;;
                 new-york/*.md)         slug=$(basename "$file" .md); echo "${SITE}/new-york/${slug}/" >> "$URL_FILE" ;;
+                georgia/*.md)          slug=$(basename "$file" .md); echo "${SITE}/georgia/${slug}/" >> "$URL_FILE" ;;
+                ohio/*.md)             slug=$(basename "$file" .md); echo "${SITE}/ohio/${slug}/" >> "$URL_FILE" ;;
                 tools/*.md)            slug=$(basename "$file" .md); echo "${SITE}/tools/${slug}/" >> "$URL_FILE" ;;
                 index.md)              echo "${SITE}/" >> "$URL_FILE" ;;
                 traffic-school.md)     echo "${SITE}/traffic-school/" >> "$URL_FILE" ;;
+                speeding-ticket-insurance.md)  echo "${SITE}/speeding-ticket-insurance/" >> "$URL_FILE" ;;
+                how-to-fight-a-speeding-ticket.md) echo "${SITE}/how-to-fight-a-speeding-ticket/" >> "$URL_FILE" ;;
               esac
             done <<< "$CHANGED"
           fi

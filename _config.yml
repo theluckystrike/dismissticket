@@ -56,6 +56,18 @@ defaults:
       state: New York
       state_code: NY
   - scope:
+      path: "georgia"
+    values:
+      layout: default
+      state: Georgia
+      state_code: GA
+  - scope:
+      path: "ohio"
+    values:
+      layout: default
+      state: Ohio
+      state_code: OH
+  - scope:
       path: "tools"
     values:
       layout: default

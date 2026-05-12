@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Dismiss a Traffic Ticket in New York (2026 Guide)"
-description: "Complete guide to handling a traffic ticket in New York. Learn about the TVB system, plea bargaining in non-TVB courts, point reduction courses, and your legal options."
+description: "Complete New York traffic ticket guide. TVB vs non-TVB courts, plea bargaining, PIRP point reduction, speeding ticket fines and surcharges, and Driver Responsibility Assessment explained."
 permalink: /new-york/
 redirect_from:
   - /how-to-dismiss-a-traffic-ticket-in-new-york/
@@ -226,6 +226,28 @@ Missing the deadline results in a default conviction and possible license suspen
 
 ---
 
+## How Much Will Your New York Ticket Cost?
+
+New York tickets are expensive. Between the fine, mandatory $88-$93 surcharge, and the Driver Responsibility Assessment ($300+ if you hit 6 points), a single speeding ticket can cost $500 to $1,500 before insurance increases.
+
+Use our [True Cost Calculator](/tools/cost-calculator/) to see the full cost of your ticket including 3 years of insurance increases. On the average New York premium of $2,400 per year, a 21% increase means $1,512 in additional costs.
+
+Not sure what to do with your ticket? Take our [5-question Decision Quiz](/tools/decision-quiz/) for a personalized recommendation.
+
+### Comparing New York to Other States
+
+Unlike California, Texas, and Florida, New York does not allow traffic school dismissal. If you received your ticket outside New York, check the guide for that state:
+
+- [California Traffic Ticket Guide](/california/) (traffic school dismissal available)
+- [Texas Traffic Ticket Guide](/texas/) (defensive driving dismissal available)
+- [Florida Traffic Ticket Guide](/florida/) (BDI course dismissal available)
+
+### Will Your Ticket Affect Your Insurance?
+
+A New York speeding ticket raises insurance premiums by 21% on average for 3 years. Since New York does not offer traffic school dismissal, the only way to prevent the insurance increase is to fight the ticket and win, or negotiate a plea bargain (non-TVB courts only). Learn more in our [Speeding Ticket Insurance Impact Guide](/speeding-ticket-insurance/).
+
+---
+
 ## Frequently Asked Questions
 
 ### Can I take traffic school to dismiss a ticket in New York?
@@ -256,6 +278,9 @@ No. Traffic tickets in NYC go through the TVB, which does not allow plea bargain
 - [TVB Online Services](https://tvbweb.courts.ny.gov/)
 - [PIRP Course Providers](https://dmv.ny.gov/tickets/about-point-insurance-reduction-program)
 - [NY Vehicle and Traffic Law](https://www.nysenate.gov/legislation/laws/VAT)
+- [Speeding Ticket Insurance Impact](/speeding-ticket-insurance/)
+- [How to Fight a Speeding Ticket](/how-to-fight-a-speeding-ticket/)
+- [What Should You Do With Your Ticket?](/tools/decision-quiz/)
 
 ---
 

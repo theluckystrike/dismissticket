@@ -1267,6 +1267,133 @@ a:hover {
   }
 }
 
+/* ---------- State Selector ---------- */
+.state-selector {
+  margin: var(--space-lg) 0;
+}
+
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.state-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.state-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.state-abbr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Tools Grid ---------- */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.tool-card {
+  display: block;
+  padding: var(--space-lg);
+  background: var(--color-light-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tool-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.tool-card h3 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.tool-card p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ---------- CTA Banner ---------- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2a4a7f 100%);
+  color: #fff;
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin: var(--space-2xl) 0;
+}
+
+.cta-banner h2,
+.cta-banner h3 {
+  color: #fff;
+  border-bottom: none;
+  margin-top: 0;
+}
+
+.cta-banner p {
+  color: #c8d6e5;
+  max-width: 560px;
+  margin: 0 auto var(--space-md);
+}
+
+.cta-banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cta-banner a:hover {
+  color: #e2e8f0;
+}
+
+/* ---------- Related Guides List ---------- */
+.content ul li a {
+  font-weight: 500;
+}
+
 /* ---------- Print ---------- */
 @media print {
   .site-header,

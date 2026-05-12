@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Online Traffic School — Complete Guide to Courses, Costs & State Rules (2026)"
-description: "Everything you need to know about online traffic school. Compare top courses, understand state eligibility rules, and find the fastest way to dismiss your ticket."
+title: "Online Traffic School and Defensive Driving Course — Compare Courses, State Rules (2026)"
+description: "Compare online traffic school and defensive driving courses. State-by-state eligibility rules, course costs, and how to dismiss your traffic ticket with an approved online course."
 permalink: /traffic-school/
 redirect_from:
   - /online-traffic-school-guide/
@@ -96,6 +96,8 @@ redirect_from:
 
 Online traffic school is the fastest, cheapest way to dismiss a traffic ticket in most US states. You complete a state-approved course from your computer or phone, submit your certificate, and your ticket is dismissed with no points and no insurance increase.
 
+Online traffic school is also called a defensive driving course, driver improvement course, or driver safety course depending on your state. The names are different but the result is the same: complete the course, submit your certificate, and your ticket is dismissed.
+
 ---
 
 ## How Online Traffic School Works
@@ -107,6 +109,23 @@ Online traffic school is the fastest, cheapest way to dismiss a traffic ticket i
 5. Pass the final exam. Most courses allow unlimited retakes.
 6. Certificate is sent to your court. Many courses report electronically.
 7. Ticket dismissed with no conviction and no points.
+
+---
+
+## Online Defensive Driving Course vs. Traffic School
+
+These terms refer to the same thing. The name varies by state:
+
+| State | Official Name | Common Name |
+|-------|--------------|-------------|
+| [California](/california/) | Traffic Violator School | Traffic school |
+| [Texas](/texas/) | Driving Safety Course | Defensive driving |
+| [Florida](/florida/) | Basic Driver Improvement (BDI) | Traffic school |
+| [New York](/new-york/) | Point and Insurance Reduction Program (PIRP) | Defensive driving (point reduction only, no dismissal) |
+| Georgia | Defensive Driving Course | Defensive driving |
+| Ohio | Remedial Driving Course | Traffic school |
+
+Regardless of the name, the process is the same: complete a state-approved online course to dismiss your traffic ticket or reduce points on your driving record.
 
 ---
 
@@ -159,6 +178,26 @@ Online traffic school is the fastest, cheapest way to dismiss a traffic ticket i
 | Total | $1,350-$5,000 |
 
 Traffic school saves $1,000-$4,500 on average by preventing insurance rate increases.
+
+### Why Traffic School Is Almost Always Worth It
+
+The math is simple. Traffic school costs $15-$50. Not taking traffic school costs $1,000-$4,500 in insurance increases over 3 years. Even when you add the court administrative fee, traffic school saves 10x to 50x its cost.
+
+The only exception is New York, where the PIRP course reduces points but does not dismiss the ticket or prevent insurance increases from the conviction itself.
+
+---
+
+## Related Guides
+
+- [How Much Does a Speeding Ticket Affect Your Insurance?](/speeding-ticket-insurance/) — See the true cost of not taking traffic school
+- [How to Fight a Speeding Ticket](/how-to-fight-a-speeding-ticket/) — When fighting is better than traffic school
+- [Texas Online Defensive Driving Guide](/texas/defensive-driving-online/) — Detailed guide for Texas drivers
+- [California Speeding Ticket Costs](/california/speeding-ticket-cost/) — Full cost breakdown including traffic school savings
+
+### Free Tools
+
+- [Decision Quiz](/tools/decision-quiz/) — Not sure if traffic school is right for you? Answer 5 questions.
+- [True Cost Calculator](/tools/cost-calculator/) — See how much traffic school saves you in insurance costs.
 
 ---
 

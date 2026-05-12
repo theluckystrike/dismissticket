@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "How to Dismiss a Traffic Ticket in Florida (2026 Guide)"
-description: "Complete guide to dismissing a traffic ticket in Florida. Learn about Basic Driver Improvement courses, adjudication withheld, court options, and Florida traffic ticket law."
+description: "Complete Florida traffic ticket guide. Basic Driver Improvement course, adjudication withheld explained, speeding ticket costs, 30-day deadline, and how to dismiss your ticket. Free tools."
 permalink: /florida/
 redirect_from:
   - /how-to-dismiss-a-traffic-ticket-in-florida/
@@ -165,6 +165,8 @@ In Florida, electing traffic school results in adjudication withheld, meaning th
 - Adjudication withheld means no points, no conviction, and insurance may not increase
 - Adjudicated guilty means points added, conviction on record, and insurance increase
 
+See our [Online Traffic School Guide](/traffic-school/) for tips on choosing the best state-approved BDI course.
+
 ---
 
 ## Option 2: Contest the Ticket in Court
@@ -250,6 +252,18 @@ Missing the 30-day deadline results in an automatic guilty adjudication and a la
 
 ---
 
+## How Much Will Your Florida Ticket Cost?
+
+Florida drivers pay some of the highest insurance premiums in the country. Use our [True Cost Calculator](/tools/cost-calculator/) to see the full cost of your ticket including 3 years of insurance increases. The average Florida premium is $2,800 per year, and a single speeding ticket raises it by 24%.
+
+Not sure whether to elect traffic school or fight your ticket? Take our [5-question Decision Quiz](/tools/decision-quiz/) for a personalized recommendation.
+
+### Will Your Ticket Affect Your Insurance?
+
+A Florida speeding ticket raises insurance premiums by 24% on average for 3 years. On the average Florida premium of $2,800 per year, that is $2,016 in additional insurance costs. Electing a BDI course prevents this increase entirely by keeping points off your record. Learn more in our [Speeding Ticket Insurance Impact Guide](/speeding-ticket-insurance/).
+
+---
+
 ## Frequently Asked Questions
 
 ### How many times can I elect traffic school in Florida?
@@ -279,6 +293,9 @@ Missing the 30-day deadline results in an automatic guilty adjudication, a late 
 - [Florida DHSMV Driver License Points](https://www.flhsmv.gov/driver-licenses-id-cards/driver-license-points/)
 - [Florida Traffic School Courses](https://www.flhsmv.gov/driver-licenses-id-cards/education-courses/driver-improvement-courses/)
 - [Florida Statutes Chapter 316](http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/0316ContentsIndex.html)
+- [Online Traffic School Guide](/traffic-school/)
+- [Speeding Ticket Insurance Impact](/speeding-ticket-insurance/)
+- [Should You Fight or Take Traffic School?](/tools/decision-quiz/)
 
 ---
 
