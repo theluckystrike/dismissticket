@@ -13,6 +13,7 @@ exclude:
   - README.md
   - CLAUDE.md
   - Gemfile.lock
+  - google1a218412aeef37cf.html
 
 include:
   - _headers
