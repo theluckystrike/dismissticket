@@ -69,6 +69,30 @@ defaults:
       state: Ohio
       state_code: OH
   - scope:
+      path: "virginia"
+    values:
+      layout: default
+      state: Virginia
+      state_code: VA
+  - scope:
+      path: "illinois"
+    values:
+      layout: default
+      state: Illinois
+      state_code: IL
+  - scope:
+      path: "pennsylvania"
+    values:
+      layout: default
+      state: Pennsylvania
+      state_code: PA
+  - scope:
+      path: "north-carolina"
+    values:
+      layout: default
+      state: North Carolina
+      state_code: NC
+  - scope:
       path: "tools"
     values:
       layout: default

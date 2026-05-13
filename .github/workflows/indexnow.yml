@@ -10,11 +10,20 @@ on:
       - 'new-york/**'
       - 'georgia/**'
       - 'ohio/**'
+      - 'virginia/**'
+      - 'illinois/**'
+      - 'pennsylvania/**'
+      - 'north-carolina/**'
       - 'tools/**'
       - 'index.md'
       - 'traffic-school.md'
       - 'speeding-ticket-insurance.md'
       - 'how-to-fight-a-speeding-ticket.md'
+      - 'red-light-ticket.md'
+      - 'points-on-license.md'
+      - 'reckless-driving.md'
+      - 'about.md'
+      - 'privacy-policy.md'
   workflow_dispatch:
     inputs:
       submit_all:
@@ -49,8 +58,13 @@ jobs:
             echo "${SITE}/traffic-school/" >> "$URL_FILE"
             echo "${SITE}/speeding-ticket-insurance/" >> "$URL_FILE"
             echo "${SITE}/how-to-fight-a-speeding-ticket/" >> "$URL_FILE"
+            echo "${SITE}/red-light-ticket/" >> "$URL_FILE"
+            echo "${SITE}/points-on-license/" >> "$URL_FILE"
+            echo "${SITE}/reckless-driving/" >> "$URL_FILE"
+            echo "${SITE}/about/" >> "$URL_FILE"
+            echo "${SITE}/privacy-policy/" >> "$URL_FILE"
 
-            for state_dir in california texas florida new-york georgia ohio; do
+            for state_dir in california texas florida new-york georgia ohio virginia illinois pennsylvania north-carolina; do
               if [[ -d "$state_dir" ]]; then
                 echo "${SITE}/${state_dir}/" >> "$URL_FILE"
                 for f in "${state_dir}"/*.md; do
@@ -88,17 +102,30 @@ jobs:
                 new-york/index.md)     echo "${SITE}/new-york/" >> "$URL_FILE" ;;
                 georgia/index.md)      echo "${SITE}/georgia/" >> "$URL_FILE" ;;
                 ohio/index.md)         echo "${SITE}/ohio/" >> "$URL_FILE" ;;
+                virginia/index.md)     echo "${SITE}/virginia/" >> "$URL_FILE" ;;
+                illinois/index.md)     echo "${SITE}/illinois/" >> "$URL_FILE" ;;
+                pennsylvania/index.md) echo "${SITE}/pennsylvania/" >> "$URL_FILE" ;;
+                north-carolina/index.md) echo "${SITE}/north-carolina/" >> "$URL_FILE" ;;
                 california/*.md)       slug=$(basename "$file" .md); echo "${SITE}/california/${slug}/" >> "$URL_FILE" ;;
                 texas/*.md)            slug=$(basename "$file" .md); echo "${SITE}/texas/${slug}/" >> "$URL_FILE" ;;
                 florida/*.md)          slug=$(basename "$file" .md); echo "${SITE}/florida/${slug}/" >> "$URL_FILE" ;;
                 new-york/*.md)         slug=$(basename "$file" .md); echo "${SITE}/new-york/${slug}/" >> "$URL_FILE" ;;
                 georgia/*.md)          slug=$(basename "$file" .md); echo "${SITE}/georgia/${slug}/" >> "$URL_FILE" ;;
                 ohio/*.md)             slug=$(basename "$file" .md); echo "${SITE}/ohio/${slug}/" >> "$URL_FILE" ;;
+                virginia/*.md)         slug=$(basename "$file" .md); echo "${SITE}/virginia/${slug}/" >> "$URL_FILE" ;;
+                illinois/*.md)         slug=$(basename "$file" .md); echo "${SITE}/illinois/${slug}/" >> "$URL_FILE" ;;
+                pennsylvania/*.md)     slug=$(basename "$file" .md); echo "${SITE}/pennsylvania/${slug}/" >> "$URL_FILE" ;;
+                north-carolina/*.md)   slug=$(basename "$file" .md); echo "${SITE}/north-carolina/${slug}/" >> "$URL_FILE" ;;
                 tools/*.md)            slug=$(basename "$file" .md); echo "${SITE}/tools/${slug}/" >> "$URL_FILE" ;;
                 index.md)              echo "${SITE}/" >> "$URL_FILE" ;;
                 traffic-school.md)     echo "${SITE}/traffic-school/" >> "$URL_FILE" ;;
                 speeding-ticket-insurance.md)  echo "${SITE}/speeding-ticket-insurance/" >> "$URL_FILE" ;;
                 how-to-fight-a-speeding-ticket.md) echo "${SITE}/how-to-fight-a-speeding-ticket/" >> "$URL_FILE" ;;
+                red-light-ticket.md)   echo "${SITE}/red-light-ticket/" >> "$URL_FILE" ;;
+                points-on-license.md)  echo "${SITE}/points-on-license/" >> "$URL_FILE" ;;
+                reckless-driving.md)   echo "${SITE}/reckless-driving/" >> "$URL_FILE" ;;
+                about.md)              echo "${SITE}/about/" >> "$URL_FILE" ;;
+                privacy-policy.md)     echo "${SITE}/privacy-policy/" >> "$URL_FILE" ;;
               esac
             done <<< "$CHANGED"
           fi

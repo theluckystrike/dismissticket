@@ -12,9 +12,11 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   {% include nav.html %}
 
-  <main class="site-main" role="main">
+  <main class="site-main" role="main" id="main-content">
     <article class="content">
       {{ content }}
     </article>
@@ -43,6 +45,10 @@
             <li><a href="{{ '/new-york/' | relative_url }}">New York</a></li>
             <li><a href="{{ '/georgia/' | relative_url }}">Georgia</a></li>
             <li><a href="{{ '/ohio/' | relative_url }}">Ohio</a></li>
+            <li><a href="{{ '/virginia/' | relative_url }}">Virginia</a></li>
+            <li><a href="{{ '/illinois/' | relative_url }}">Illinois</a></li>
+            <li><a href="{{ '/pennsylvania/' | relative_url }}">Pennsylvania</a></li>
+            <li><a href="{{ '/north-carolina/' | relative_url }}">North Carolina</a></li>
           </ul>
         </div>
         <div class="footer-links">
@@ -53,6 +59,11 @@
             <li><a href="{{ '/tools/cost-calculator/' | relative_url }}">Cost Calculator</a></li>
             <li><a href="{{ '/speeding-ticket-insurance/' | relative_url }}">Insurance Impact Guide</a></li>
             <li><a href="{{ '/how-to-fight-a-speeding-ticket/' | relative_url }}">Fight Your Ticket</a></li>
+            <li><a href="{{ '/red-light-ticket/' | relative_url }}">Red Light Tickets</a></li>
+            <li><a href="{{ '/points-on-license/' | relative_url }}">Points on License</a></li>
+            <li><a href="{{ '/reckless-driving/' | relative_url }}">Reckless Driving</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a></li>
           </ul>
         </div>
       </div>

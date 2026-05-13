@@ -133,6 +133,10 @@ Every state has different rules for traffic ticket dismissal. Click your state f
 <a href="/new-york/" class="state-card"><span class="state-abbr">NY</span> New York</a>
 <a href="/georgia/" class="state-card"><span class="state-abbr">GA</span> Georgia</a>
 <a href="/ohio/" class="state-card"><span class="state-abbr">OH</span> Ohio</a>
+<a href="/virginia/" class="state-card"><span class="state-abbr">VA</span> Virginia</a>
+<a href="/illinois/" class="state-card"><span class="state-abbr">IL</span> Illinois</a>
+<a href="/pennsylvania/" class="state-card"><span class="state-abbr">PA</span> Pennsylvania</a>
+<a href="/north-carolina/" class="state-card"><span class="state-abbr">NC</span> North Carolina</a>
 </div>
 </div>
 
@@ -143,6 +147,9 @@ Every state has different rules for traffic ticket dismissal. Click your state f
 - [How to Fight a Speeding Ticket](/how-to-fight-a-speeding-ticket/) — Step-by-step guide to contesting your ticket in court
 - [Will a Speeding Ticket Affect My Insurance?](/speeding-ticket-insurance/) — How much your rates will increase and how to prevent it
 - [Online Defensive Driving Courses](/traffic-school/) — Compare courses, costs, and state eligibility rules
+- [How to Fight a Red Light Ticket](/red-light-ticket/) — Camera tickets, defenses, and state-by-state laws
+- [Points on Your Driving Record](/points-on-license/) — State-by-state suspension thresholds and how to reduce points
+- [Reckless Driving Charges](/reckless-driving/) — Criminal penalties, defense strategies, and plea bargain options
 
 ---
 
