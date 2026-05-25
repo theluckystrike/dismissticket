@@ -13,7 +13,8 @@ permalink: /
       "@type": "WebSite",
       "name": "DismissTicket",
       "url": "https://dismissticket.com/",
-      "description": "Free state-by-state traffic ticket dismissal guides and tools"
+      "description": "Free state-by-state traffic ticket dismissal guides and tools",
+      "sameAs": "https://github.com/theluckystrike/dismissticket.com"
     },
     {
       "@type": "Organization",
