@@ -19,18 +19,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    outputs:
+      rendered_artifact_id: ${{ steps.pages_artifact.outputs.artifact_id }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1
         with:
           source: ./
           destination: ./_site
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        id: pages_artifact
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
 
   deploy:
     environment:
@@ -41,7 +46,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
 
   indexnow:
     needs: deploy
@@ -71,3 +76,102 @@ jobs:
             -d @/tmp/indexnow-payload.json)
 
           echo "Submitted $URL_COUNT URLs to IndexNow (HTTP $RESPONSE)"
+
+  package_cloudflare:
+    needs: build
+    permissions:
+      contents: read
+      actions: read
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && github.repository == 'theluckystrike/dismissticket'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      source_commit: ${{ steps.source.outputs.commit }}
+      root_digest: ${{ steps.package.outputs.root_digest }}
+      artifact_digest: ${{ steps.upload.outputs.artifact-digest }}
+    steps:
+      - name: Check out the exact source commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          ref: ${{ github.sha }}
+      - name: Resolve this package's immutable source commit once
+        id: source
+        run: echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Download the SAME immutable artifact produced by the existing Jekyll build
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: github-pages
+          path: _github_pages
+      - name: Package rendered files without another build; withhold unreferenced hosting metadata
+        id: package
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+          RENDERED_ARTIFACT_ID: ${{ needs.build.outputs.rendered_artifact_id }}
+        run: python3 .github/scripts/package_rendered_artifact.py --worker ssl-recovery-dismissticket --domain dismissticket.com
+      - name: Upload one immutable deployment artifact
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ssl-recovery-${{ steps.source.outputs.commit }}
+          path: _ssl_bundle
+          if-no-files-found: error
+          retention-days: 7
+      - name: Record artifact identity
+        env:
+          SOURCE_COMMIT: ${{ steps.source.outputs.commit }}
+          ROOT_DIGEST: ${{ steps.package.outputs.root_digest }}
+          ARTIFACT_DIGEST: ${{ steps.upload.outputs.artifact-digest }}
+        run: |
+          {
+            echo "Source commit: $SOURCE_COMMIT"
+            echo "Root asset manifest SHA256: $ROOT_DIGEST"
+            echo "GitHub artifact SHA256: $ARTIFACT_DIGEST"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy_cloudflare:
+    needs: package_cloudflare
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - name: Check out only to run the committed artifact verifier and config
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          ref: ${{ needs.package_cloudflare.outputs.source_commit }}
+      - name: Download this run's exact immutable artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: ssl-recovery-${{ needs.package_cloudflare.outputs.source_commit }}
+          path: _ssl_bundle
+      - name: Verify every artifact byte, source commit and root digest
+        env:
+          ROOT_DIGEST: ${{ needs.package_cloudflare.outputs.root_digest }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 .github/scripts/package_rendered_artifact.py --worker ssl-recovery-dismissticket --domain dismissticket.com --verify --expected-digest "$ROOT_DIGEST"
+      - name: Upload the verified artifact as a new assets-only Worker version
+        id: upload_version
+        uses: cloudflare/wrangler-action@9acf94ace14e7dc412b076f2c5c20b8ce93c79cd # v3
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_DEPLOY_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_WORKER_DEPLOY_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.3'
+          packageManager: npm
+          command: versions upload --config .cloudflare/wrangler.jsonc --no-bundle --tag ci-${{ github.run_id }}-${{ github.run_attempt }} --message "${{ needs.package_cloudflare.outputs.source_commit }} ${{ needs.package_cloudflare.outputs.root_digest }}"
+      - name: Attest and deploy only the exact uploaded version, then verify readback
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_DEPLOY_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          EXPECTED_WORKER: ssl-recovery-dismissticket
+          EXPECTED_DOMAIN: dismissticket.com
+          SOURCE_COMMIT: ${{ needs.package_cloudflare.outputs.source_commit }}
+          ROOT_DIGEST: ${{ needs.package_cloudflare.outputs.root_digest }}
+          WRANGLER_UPLOAD_OUTPUT: ${{ steps.upload_version.outputs.command-output }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 .github/scripts/deploy_worker_version.py
