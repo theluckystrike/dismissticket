@@ -5,6 +5,14 @@ description: "Answer 5 quick questions to get a personalized recommendation for 
 permalink: /tools/decision-quiz/
 ---
 
+# Traffic Ticket Decision Quiz
+
+The quiz asks five questions about your state, violation, speed, driving history and CDL status. It then recommends the option most likely to avoid points and an insurance increase, such as traffic school, a court hearing or an attorney. It covers ten states and gives general guidance elsewhere.
+
+By the DismissTicket Team
+
+Updated 2026-10-28
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,7 +33,8 @@ permalink: /tools/decision-quiz/
         "@type": "Organization",
         "name": "DismissTicket",
         "url": "https://dismissticket.com/"
-      }
+      },
+      "@id": "https://dismissticket.com/tools/decision-quiz/#app"
     },
     {
       "@type": "BreadcrumbList",

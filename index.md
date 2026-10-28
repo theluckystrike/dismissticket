@@ -10,42 +10,22 @@ permalink: /
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebSite",
+      "@type": "Organization",
+      "@id": "https://dismissticket.com/#organization",
       "name": "DismissTicket",
       "url": "https://dismissticket.com/",
-      "description": "Free state-by-state traffic ticket dismissal guides and tools",
-      "sameAs": "https://github.com/theluckystrike/dismissticket.com"
-    },
-    {
-      "@type": "Organization",
-      "name": "DismissTicket",
-      "url": "https://dismissticket.com/"
+      "sameAs": "https://github.com/theluckystrike/dismissticket"
     },
     {
       "@type": "FAQPage",
+      "@id": "https://dismissticket.com/#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I dismiss a traffic ticket without going to court?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Most states allow you to dismiss a traffic ticket by completing an approved traffic school or defensive driving course. Some states also offer Trial by Written Declaration or deferred adjudication options that do not require a court appearance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does a traffic ticket really cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The true cost of a traffic ticket goes far beyond the fine. A typical speeding ticket with a $200 fine actually costs $1,350 to $5,200 over 3 years when you include court fees, insurance rate increases of 20 to 30 percent, and points on your driving record."
-          }
-        },
         {
           "@type": "Question",
           "name": "How long do I have to respond to a traffic ticket?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most states give you 15 to 30 days from the date of the citation to respond. Check your ticket for the exact deadline. Missing it can result in additional fines, a suspended license, or a bench warrant."
+            "text": "Most states give you 15-30 days from the date of the citation to respond. Check your ticket for the deadline. Missing it can result in additional fines, a suspended license, or a bench warrant."
           }
         },
         {
@@ -53,7 +33,31 @@ permalink: /
           "name": "Will a dismissed ticket show on my record?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. A properly dismissed ticket does not add points to your driving record and typically does not appear on insurance checks. It may still be visible to law enforcement."
+            "text": "No. A properly dismissed ticket does not add points to your driving record and typically does not appear on insurance checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I dismiss a ticket if I already paid it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most states, paying the fine is an admission of guilt and closes the case. However, some states allow you to request traffic school even after payment. Check your state guide above."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many times can I use traffic school to dismiss a ticket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most states limit traffic school dismissal to once every 12-18 months. Some states (like California) allow it once every 18 months per violation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a lawyer to fight a traffic ticket?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can represent yourself at a traffic court hearing. However, for serious violations (reckless driving, excessive speed over 25+ mph, school zones) or if you hold a CDL, a traffic ticket attorney is strongly recommended."
           }
         },
         {
@@ -61,7 +65,7 @@ permalink: /
           "name": "Will a speeding ticket affect my insurance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. A speeding ticket raises insurance premiums by 20 to 30 percent on average for 3 to 5 years. On a $1,900 annual premium, that is $1,368 over 3 years. Traffic school or defensive driving prevents the increase in most states."
+            "text": "Yes. A speeding ticket raises insurance premiums by 20-30% on average for 3-5 years. On a $1,900 annual premium, that is $1,368 over 3 years. Traffic school or defensive driving prevents the increase in most states. See our full insurance impact guide."
           }
         },
         {
@@ -69,19 +73,8 @@ permalink: /
           "name": "What is a defensive driving course?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A defensive driving course, also called traffic school or driver improvement course, is a state-approved class that dismisses your traffic ticket when completed. Most courses are available online, take 4 to 8 hours, and cost $15 to $50."
+            "text": "A defensive driving course (also called traffic school or driver improvement course) is a state-approved class that dismisses your traffic ticket when completed. Most courses are available online, take 4-8 hours, and cost $15-$50. See our complete traffic school guide."
           }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://dismissticket.com/"
         }
       ]
     }
@@ -90,6 +83,12 @@ permalink: /
 </script>
 
 # How to Dismiss a Traffic Ticket
+
+Most drivers can dismiss a traffic ticket without a trial. The common paths are traffic school or defensive driving, a court hearing, a deferred adjudication program, or a ticket attorney. Options and deadlines differ by state, and most states give you 15 to 30 days from the citation date to respond.
+
+By the DismissTicket Team
+
+Updated 2026-10-28
 
 Got a traffic ticket? Don't just pay it. Paying a traffic ticket is an admission of guilt that adds points to your driving record, raises your insurance rates, and stays on your record for years.
 

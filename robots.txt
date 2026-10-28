@@ -5,3 +5,43 @@ Sitemap: https://dismissticket.com/sitemap.xml
 # Block crawling of tools' internal assets
 User-agent: *
 Disallow: /assets/
+
+# AI search and answer-engine crawlers (named groups, added 2026-10-28)
+# Each named group repeats the /assets/ rule because a named group
+# replaces the wildcard group for that bot.
+
+User-agent: OAI-SearchBot
+Disallow: /assets/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /assets/
+Allow: /
+
+User-agent: PerplexityBot
+Disallow: /assets/
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /assets/
+Allow: /
+
+User-agent: Claude-SearchBot
+Disallow: /assets/
+Allow: /
+
+User-agent: Claude-User
+Disallow: /assets/
+Allow: /
+
+User-agent: Applebot
+Disallow: /assets/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /assets/
+Allow: /
+
+User-agent: Googlebot
+Disallow: /assets/
+Allow: /
