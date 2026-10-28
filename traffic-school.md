@@ -225,4 +225,8 @@ Most online traffic school courses allow unlimited retakes of the final exam at 
 
 ---
 
+**Related:** if you want to avoid a court appearance entirely, see [can you dismiss a traffic ticket without going to court](/can-i-dismiss-a-traffic-ticket-without-court/).
+
+---
+
 *DismissTicket.com provides general information about traffic school options. Course availability and state rules change regularly. Verify eligibility with your local court before enrolling.*

@@ -25,7 +25,8 @@ permalink: /tools/cost-calculator/
         "@type": "Organization",
         "name": "DismissTicket",
         "url": "https://dismissticket.com/"
-      }
+      },
+      "@id": "https://dismissticket.com/tools/cost-calculator/#app"
     },
     {
       "@type": "BreadcrumbList",
@@ -455,6 +456,12 @@ permalink: /tools/cost-calculator/
 </style>
 
 # Traffic Ticket True Cost Calculator
+
+A traffic ticket costs more than the fine on the citation. This calculator adds the base fine, court fees and surcharges, and three years of insurance increases. A single moving violation raises premiums by 20 to 30 percent on average, so a $1,800 yearly policy pays $1,296 to $1,944 extra.
+
+By the DismissTicket Team
+
+Updated 2026-10-28
 
 <div class="calc-container">
   <div class="calc-intro">

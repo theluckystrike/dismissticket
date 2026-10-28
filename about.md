@@ -9,22 +9,25 @@ permalink: /about/
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://dismissticket.com/#organization",
   "name": "DismissTicket",
   "url": "https://dismissticket.com/",
-  "logo": "https://dismissticket.com/assets/images/logo.png",
-  "description": "Free state-by-state traffic ticket dismissal guides, tools, and resources for US drivers.",
-  "foundingDate": "2026",
+  "description": "DismissTicket.com is a free resource that helps drivers across the United States understand their options after receiving a traffic ticket.",
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "info@dismissticket.com",
-    "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "sameAs": []
+    "contactType": "customer service"
+  }
 }
 </script>
 
 # About DismissTicket
+
+DismissTicket.com is a free resource that helps drivers across the United States understand their options after receiving a traffic ticket. We publish state-by-state dismissal guides, free decision tools, and in-depth articles on traffic law, insurance impacts, and defensive driving courses. No account or payment is required.
+
+By the DismissTicket Team
+
+Updated 2026-10-28
 
 DismissTicket.com is a free resource that helps drivers across the United States understand their options after receiving a traffic ticket. We publish state-by-state dismissal guides, free decision tools, and in-depth articles on traffic law, insurance impacts, and defensive driving courses.
 
